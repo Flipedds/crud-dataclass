@@ -1,5 +1,6 @@
 from classes.User import User
 from classes.ListOfUsers import ListOfUsers
+from typing import List
 
 def test_creating_a_new_user_in_list():
     user = User('Filipe', 19, '06/03/2004')
@@ -31,3 +32,12 @@ def test_failing_removing_a_user_in_list():
     result = new_list.remove_user(1) # remove a partir do index do usuário
 
     assert "User don't exists" == result
+
+def test_showing_the_list_of_users():
+    user = User('Filipe', 19, '06/03/2004')
+    other_user = User('André', 19, '06/03/2004')
+    new_list = ListOfUsers()
+    new_list.insert_user(user)
+    new_list.insert_user(other_user)
+    result = new_list.show_users()
+    assert isinstance(result, List) == True
