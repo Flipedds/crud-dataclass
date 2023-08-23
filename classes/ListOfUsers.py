@@ -18,4 +18,6 @@ class ListOfUsers:
         return f'User {index} removed !'
     
     def show_users(self):
+        if len(self.list) <= 0:
+            return 'The list is empty !'
         return self.list
