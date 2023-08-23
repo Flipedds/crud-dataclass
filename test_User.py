@@ -41,3 +41,8 @@ def test_showing_the_list_of_users():
     new_list.insert_user(other_user)
     result = new_list.show_users()
     assert isinstance(result, List) == True
+
+def test_failing_showing_the_list_of_users_is_empty():
+    new_list = ListOfUsers()
+    result = new_list.show_users()
+    assert 'The list is empty !' == result
