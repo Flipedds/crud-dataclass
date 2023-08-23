@@ -9,3 +9,7 @@ class ListOfUsers:
             return 'Not a user, could not add in list !'
         self.list.append(user)
         return "User added in the list !"
+    
+    def remove_user(self, index):
+        self.list.pop(index)
+        return f'User {index} removed !'
