@@ -16,3 +16,6 @@ class ListOfUsers:
             return "User don't exists"
         self.list.pop(index)
         return f'User {index} removed !'
+    
+    def show_users(self):
+        return self.list
