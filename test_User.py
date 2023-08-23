@@ -21,4 +21,4 @@ def test_removing_a_user_in_list():
     new_list.insert_user(user)
     result = new_list.remove_user(0) # remove a partir do index do usuário
 
-    assert 'User added in the list !' == result
+    assert 'User 0 removed !' == result
