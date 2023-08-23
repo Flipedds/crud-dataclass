@@ -11,5 +11,8 @@ class ListOfUsers:
         return "User added in the list !"
     
     def remove_user(self, index):
+        pointer = self.list.index(self.list[-1])
+        if index > pointer:
+            return "User don't exists"
         self.list.pop(index)
         return f'User {index} removed !'
